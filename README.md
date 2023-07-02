@@ -1,3 +1,2 @@
 # Python-Vitaliy
-# I love Python
-# !!!
+# I love Python and Math
