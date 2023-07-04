@@ -1,0 +1,13 @@
+git:
+1)подписаться на коллег https://github.com/orgs/SENATOROVAI/people               
+2)оформить гитхаб https://www.youtube.com/watch?v=pm17VwdJ6UI                    
+2)выбор шаблона https://github.com/abhisheknaiidu/awesome-github-profile-readme  
+
+algo:
+1)скачать
+https://t.me/c/1733865840/429
+2)https://codeforces.com/problemset/problem/71/A?locale=en  изучить интерфейс                                                                         
+3)https://www.kaggle.com/ изучить интерфейс
+
+дискретка (математика для прогеров):
+1)https://t.me/c/1733865840/43
