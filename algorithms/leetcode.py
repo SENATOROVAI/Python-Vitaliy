@@ -23,8 +23,7 @@ def some_func():
 
         n = sum_squarres
 
-        return n == 1
-
+    return n == 1
 
 
 a = some_func()
