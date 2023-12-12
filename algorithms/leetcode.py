@@ -10,7 +10,10 @@ def some_func():
     """
     n = int(input())
 
-    while n != 1:
+    k = set()
+
+    while n != 1 and n not in k:
+        k.add(n)
         digits = [int(digit) for digit in str(n)]
 
         squared_digits = [digit**2 for digit in digits]
@@ -19,7 +22,8 @@ def some_func():
 
         n = sum_squarres
 
-    return True
+        return n == 1
+
 
 
 a = some_func()
