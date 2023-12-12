@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/happy-number/description/
 
+
 def some_func():
     """
     Функция принимает числовое значение от пользователя, считает
