@@ -128,8 +128,3 @@ repos:
         language: system
         types: [python]
         args: ["--max-line-length=79"]
-
-  # - repo: https://github.com/astral-sh/ruff-pre-commit
-  #   rev: v0.4.1
-  #   hooks:
-  #     - id: ruff
