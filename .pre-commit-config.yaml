@@ -119,7 +119,8 @@ repos:
     hooks:
       - id: mypy
         args: ["--ignore-missing-imports"]
-  - repo: https://github.com/PyCQA/pylint
+  - repo: https://github.com/pylint-dev/pylint
+    rev: v3.1.0
     hooks:
       - id: pylint
         name: pylint
@@ -131,4 +132,4 @@ repos:
   # - repo: https://github.com/astral-sh/ruff-pre-commit
   #   rev: v0.4.1
   #   hooks:
-  #     - id: ruff     
+  #     - id: ruff
