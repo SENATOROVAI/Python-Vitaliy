@@ -44,6 +44,10 @@ repos:
     hooks:
       - id: nbqa-autopep8
         name: nbqa-autopep8
+        description: Run 'autopep8' on a Jupyter Notebook
+        entry: nbqa autopep8 -i
+        language: python
+        require_serial: true
         types_or: [jupyter, markdown]
         additional_dependencies: [autopep8]
       - id: nbqa-pyupgrade
