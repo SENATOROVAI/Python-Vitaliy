@@ -45,7 +45,7 @@ repos:
       - id: nbqa-autopep8
         name: nbqa-autopep8
         description: Run 'autopep8' on a Jupyter Notebook
-        entry: nbqa autopep8 -i
+        entry: nbqa autopep8
         language: python
         require_serial: true
         types_or: [jupyter, markdown]
