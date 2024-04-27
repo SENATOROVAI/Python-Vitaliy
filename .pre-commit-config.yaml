@@ -24,10 +24,10 @@ repos:
     hooks:
       - id: pyupgrade
         args: [--py39-plus]
-  - repo: https://github.com/hhatto/autopep8
-    rev: v2.1.0
-    hooks:
-      - id: autopep8
+  # - repo: https://github.com/hhatto/autopep8
+  #   rev: v2.1.0
+  #   hooks:
+  #     - id: autopep8
 
   - repo: https://github.com/pycqa/isort
     rev: 5.13.2
@@ -42,14 +42,14 @@ repos:
   - repo: https://github.com/nbQA-dev/nbQA
     rev: 1.8.5
     hooks:
-      - id: nbqa-autopep8
-        name: nbqa-autopep8
-        description: Run 'autopep8' on a Jupyter Notebook
-        entry: nbqa autopep8 -i
-        language: python
-        require_serial: true
-        types_or: [jupyter, markdown]
-        additional_dependencies: [autopep8]
+      # - id: nbqa-autopep8
+      #   name: nbqa-autopep8
+      #   description: Run 'autopep8' on a Jupyter Notebook
+      #   entry: nbqa autopep8 -i
+      #   language: python
+      #   require_serial: true
+      #   types_or: [jupyter, markdown]
+      #   additional_dependencies: [autopep8]
       - id: nbqa-pyupgrade
         name: nbqa-pyupgrade
         description: Run 'pyupgrade' on a Jupyter Notebook
