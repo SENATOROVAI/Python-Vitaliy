@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/happy-number/description/
+"""Данный модуль предназначен для проверки не является ли число счастливым."""
 
 
 def some_func():
@@ -9,23 +10,23 @@ def some_func():
     сумма квадратов числа n не станет равна 1, тогда возвращаем True,
     в случае же бесконечного цикла нужно вернуть False.
     """
-    n = int(input())
+    num = int(input())
 
-    k = set()
+    set_k = set()
 
-    while n != 1 and n not in k:
-        k.add(n)
-        digits = [int(digit) for digit in str(n)]
+    while num != 1 and num not in set_k:
+        set_k.add(num)
+        digits = [int(digit) for digit in str(num)]
 
         squared_digits = [digit**2 for digit in digits]
 
         sum_squarres = sum(squared_digits)
 
-        n = sum_squarres
+        num = sum_squarres
 
-    return n == 1
+    return num == 1
 
 
-a = some_func()
+ANSWER = some_func()
 
-print(a)
+print(ANSWER)

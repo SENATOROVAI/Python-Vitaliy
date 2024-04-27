@@ -1,17 +1,17 @@
 git:
-1)подписаться на коллег https://github.com/orgs/SENATOROVAI/people   
-#Done            
+1)подписаться на коллег https://github.com/orgs/SENATOROVAI/people
+#Done
 2)оформить гитхаб https://www.youtube.com/watch?v=pm17VwdJ6UI
-#Done       
+#Done
 2)выбор шаблона https://github.com/abhisheknaiidu/awesome-github-profile-readme
-#Done 
+#Done
 
 algo:
 1)скачать
 https://t.me/c/1733865840/429
 #Done
 2)https://codeforces.com/problemset/problem/71/A?locale=en  изучить интерфейс
-#Done                                                                         
+#Done
 3)https://www.kaggle.com/ изучить интерфейс
 #Done
 
@@ -39,18 +39,18 @@ Algorithms:
 2) (по возможности сделать хотя бы до 100+ страницы) cкачать и делать минимум 1 упражнение/пример из пройденной темы, https://t.me/SenatorovBootcamp/766/8001, создать файл в папке algorithms/skiena.ipynb и начать выполнять задачи начиная с 52 страницы. Фото тетради вставлять в ячейки ноутбука, сами фотки хранить в папке photo размещённой в корне
 
 Computer Science:
-1) компьютер сайнс пройти курс https://learn.epam.com/detailsPage?id=07464fe7-306f-4aa2-abdb-fb81ba509124 
-2) посмотреть видео https://www.youtube.com/watch?v=Wh22_O8jXVQ&list=PLIJLLSrXDPojDGKW0WZ7sU0eO3nyn0oDc 
+1) компьютер сайнс пройти курс https://learn.epam.com/detailsPage?id=07464fe7-306f-4aa2-abdb-fb81ba509124
+2) посмотреть видео https://www.youtube.com/watch?v=Wh22_O8jXVQ&list=PLIJLLSrXDPojDGKW0WZ7sU0eO3nyn0oDc
 
 GIT:
 1) https://learngitbranching.js.org/?locale=ru_RU
 
 Python:
-1) инди курс https://stepik.org/course/63085/promo 
+1) инди курс https://stepik.org/course/63085/promo
 2) книга https://coderbooks.ru/books/python/python_dlya_detej_briggs_dzhejson_2017/
 
 Векторная алгебра в Numpy:
-1) https://stepik.org/course/172781/syllabus 
+1) https://stepik.org/course/172781/syllabus
 ПРАКТИКА В NUMPY: https://www.kaggle.com/code/sokolovaleks/100-numpy-exercises-rus-version
 
 SQL:
