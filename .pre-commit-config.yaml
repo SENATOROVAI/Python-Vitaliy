@@ -18,6 +18,9 @@ repos:
         require_serial: true
         types_or: [jupyter, markdown]
         additional_dependencies: [black]
+        # args:
+          # - "--check"
+          # - "--diff"
 
   - repo: https://github.com/asottile/pyupgrade
     rev: v3.15.2
@@ -166,14 +169,14 @@ repos:
         types_or: [jupyter, markdown]
         additional_dependencies: [pydocstyle]
 
-  - repo: https://github.com/nbQA-dev/nbQA
-    rev: 1.8.5
-    hooks:
-      - id: nbqa-yapf
-        name: nbqa-yapf
-        description: Run 'yapf' on a Jupyter Notebook
-        entry: nbqa yapf --in-place
-        language: python
-        require_serial: true
-        types_or: [jupyter, markdown]
-        additional_dependencies: [yapf]
+  # - repo: https://github.com/nbQA-dev/nbQA
+  #   rev: 1.8.5
+    # hooks:
+    #   - id: nbqa-yapf
+    #     name: nbqa-yapf
+    #     description: Run 'yapf' on a Jupyter Notebook
+    #     entry: nbqa yapf --in-place
+    #     language: python
+    #     require_serial: true
+    #     types_or: [jupyter, markdown]
+    #     additional_dependencies: [yapf]
