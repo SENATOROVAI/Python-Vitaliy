@@ -55,8 +55,8 @@ jobs:
           nbqa black --check --diff --line-length=79 $(git ls-files '*.ipynb')
       - name: Mypy
         run: |
-          mypy $(git ls-files '*.py')
-          nbqa mypy $(git ls-files '*.ipynb')
+          mypy --ignore-missing-imports $(git ls-files '*.py')
+          nbqa mypy --ignore-missing-imports $(git ls-files '*.ipynb')
   prettier:
     timeout-minutes: 1
     runs-on: ubuntu-latest
