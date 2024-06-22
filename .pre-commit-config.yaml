@@ -1,4 +1,9 @@
 repos:
+  - repo: https://github.com/PyCQA/docformatter
+    rev: v1.7.5
+    hooks:
+      - id: docformatter
+        args: [--in-place, --wrap-descriptions=79, --style=google]
   - repo: https://github.com/asottile/add-trailing-comma
     rev: v3.1.0
     hooks:
@@ -69,12 +74,16 @@ repos:
       - id: codespell
         additional_dependencies:
           - tomli
-
+        args:
+          - --ignore-regex=^\s*"image\/png":\s.*
+          - --skip=*.js,*.html,*.css,*.svg",*.json,*.png,*.jpg,*.yml,*.yaml
   - repo: https://github.com/nbQA-dev/nbQA
     rev: 1.8.5
     hooks:
       - id: nbqa-flake8
-        args: ["--ignore=E501,E712,W291,F632,E203"]
+        args:
+          - --ignore=E501,E712,W291,F632,E203
+          - --exclude=.*,__init__.py
         name: nbqa-flake8
         description: Run 'flake8' on a Jupyter Notebook
         entry: nbqa flake8
@@ -90,7 +99,9 @@ repos:
     rev: 7.0.0
     hooks:
       - id: flake8
-        args: ["--ignore=E501,E712,W291,F632,E203"]
+        args:
+          - --ignore=E501,E712,W291,F632,E203
+          - --exclude=.*,__init__.py
         additional_dependencies:
           - flake8-variables-names
           - pep8-naming
@@ -116,9 +127,8 @@ repos:
           - types-setuptools
 
         args:
-          - --cache-dir=/dev/null
-          - --cache-dir=nul
-          - --no-incremental
+          - --non-interactive
+          - --install-types
           - --explicit-package-bases
           - --ignore-missing-imports
           - --disallow-untyped-calls
@@ -126,11 +136,8 @@ repos:
           - --disallow-untyped-decorators
           - --strict
           - --extra-checks
-          - --disallow-any-unimported
           - --disallow-any-decorated
-          - --disallow-any-explicit
           - --disallow-any-generics
-          - --disallow-subclassing-any
           - --local-partial-types
           - --pretty
           - --force-uppercase-builtins
@@ -146,9 +153,8 @@ repos:
     hooks:
       - id: mypy
         args:
-          - --cache-dir=/dev/null
-          - --cache-dir=nul
-          - --no-incremental
+          - --non-interactive
+          - --install-types
           - --explicit-package-bases
           - --ignore-missing-imports
           - --disallow-untyped-calls
@@ -156,11 +162,8 @@ repos:
           - --disallow-untyped-decorators
           - --strict
           - --extra-checks
-          - --disallow-any-unimported
           - --disallow-any-decorated
-          - --disallow-any-explicit
           - --disallow-any-generics
-          - --disallow-subclassing-any
           - --local-partial-types
           - --pretty
           - --force-uppercase-builtins
@@ -168,7 +171,6 @@ repos:
           - --warn-unreachable
           - --warn-redundant-casts
           - --warn-return-any
-
 
 
         additional_dependencies:
@@ -192,11 +194,10 @@ repos:
         types_or: [jupyter, markdown]
         additional_dependencies: [pylint]
         args:
-          [
-            "--max-line-length=79",
-            "--const-naming-style=any",
-            "--disable=E0401,W0104",
-          ]
+          - --ignore=no_check*,
+          - --max-line-length=79
+          - --const-naming-style=any
+          - --disable=E0401,W0104,R0903
 
   - repo: https://github.com/pre-commit/mirrors-pylint
     rev: v2.3.1
@@ -207,7 +208,12 @@ repos:
         language: python
         types: [python]
         args:
-          [--max-line-length=79, "--const-naming-style=any", "--disable=E0401,W0104"]
+          [
+            "--ignore=no_check*",
+            "--max-line-length=79",
+            "--const-naming-style=any",
+            "--disable=E0401,W0104,R0903",
+          ]
         additional_dependencies: [pylint]
 
   - repo: https://github.com/nbQA-dev/nbQA
