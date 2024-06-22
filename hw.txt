@@ -75,10 +75,6 @@ Computer Science:
 GIT:
 1) https://learngitbranching.js.org/?locale=ru_RU
 
-Python:
-1) инди курс https://stepik.org/course/63085/promo
-2) книга https://coderbooks.ru/books/python/python_dlya_detej_briggs_dzhejson_2017/
-
 Векторная алгебра в Numpy:
 1) https://stepik.org/course/172781/syllabus
 ПРАКТИКА В NUMPY: https://www.kaggle.com/code/sokolovaleks/100-numpy-exercises-rus-version
