@@ -1,17 +1,20 @@
-repos: 
+repos:
   - repo: https://github.com/PyCQA/docformatter
     rev: v1.7.5
     hooks:
       - id: docformatter
         args: [--in-place, --wrap-descriptions=79, --style=google]
+
   - repo: https://github.com/asottile/add-trailing-comma
     rev: v3.1.0
     hooks:
       - id: add-trailing-comma
+
   - repo: https://github.com/psf/black.git
     rev: 24.4.0
     hooks:
       - id: black
+
   - repo: https://github.com/nbQA-dev/nbQA
     rev: 1.8.5
     hooks:
@@ -23,21 +26,26 @@ repos:
         require_serial: true
         types_or: [jupyter, markdown]
         additional_dependencies: [black]
+
   - repo: https://github.com/asottile/pyupgrade
     rev: v3.15.2
     hooks:
       - id: pyupgrade
         args: [--py39-plus]
+
   - repo: https://github.com/pycqa/isort
     rev: 5.13.2
     hooks:
       - id: isort
+        args: [--skip=python/python_made_easy/*]
+
   - repo: https://github.com/adamchainz/blacken-docs
     rev: 1.16.0
     hooks:
       - id: blacken-docs
         additional_dependencies:
           - black==24.2.0
+
   - repo: https://github.com/nbQA-dev/nbQA
     rev: 1.8.5
     hooks:
@@ -49,6 +57,7 @@ repos:
         require_serial: true
         types_or: [jupyter, markdown]
         additional_dependencies: [pyupgrade]
+
       - id: nbqa-isort
         name: nbqa-isort
         description: Run 'isort' on a Jupyter Notebook
@@ -75,15 +84,16 @@ repos:
         additional_dependencies:
           - tomli
         args:
-          - --ignore-regex=^\s*"image\/png":\s.*
-          - --skip=*.js,*.html,*.css,*.svg",*.json,*.png,*.jpg,*.yml,*.yaml
+          - --ignore-regex=^\s*"image\/(jpeg|png|gif|bmp|tiff)":\s.*
+          - --skip=*.js,*.html,*.css,*.svg,*.json,*.png,*.jpg,*.yml,*.yaml,python/python_made_easy/*
+
   - repo: https://github.com/nbQA-dev/nbQA
     rev: 1.8.5
     hooks:
       - id: nbqa-flake8
         args:
           - --ignore=E501,E712,W291,F632,E203,F821,F403
-          - --exclude=.*,__init__.py
+          - --exclude=python/python_made_easy/*
         name: nbqa-flake8
         description: Run 'flake8' on a Jupyter Notebook
         entry: nbqa flake8
@@ -101,11 +111,7 @@ repos:
       - id: flake8
         args:
           - --ignore=E501,E712,W291,F632,E203,F821,F403
-          - --exclude=.*,__init__.py
-        additional_dependencies:
-          - flake8-variables-names
-          - pep8-naming
-          - flake8-functions-names
+          - --exclude=python/python_made_easy/
 
   - repo: https://github.com/nbQA-dev/nbQA
     rev: 1.8.5
@@ -125,10 +131,10 @@ repos:
           - types-requests
           - types-PyYAML
           - types-setuptools
-
         args:
-          - --non-interactive
-          - --install-types
+          - --cache-dir=/dev/null
+          - --cache-dir=nul
+          - --no-incremental
           - --explicit-package-bases
           - --ignore-missing-imports
           - --disallow-untyped-calls
@@ -145,16 +151,16 @@ repos:
           - --warn-unreachable
           - --warn-redundant-casts
           - --warn-return-any
-
-
+          - --exclude=/python/python_made_easy/
 
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.9.0
     hooks:
       - id: mypy
         args:
-          - --non-interactive
-          - --install-types
+          - --cache-dir=/dev/null
+          - --cache-dir=nul
+          - --no-incremental
           - --explicit-package-bases
           - --ignore-missing-imports
           - --disallow-untyped-calls
@@ -171,8 +177,6 @@ repos:
           - --warn-unreachable
           - --warn-redundant-casts
           - --warn-return-any
-
-
         additional_dependencies:
           - mypy
           - pandas-stubs
@@ -194,7 +198,7 @@ repos:
         types_or: [jupyter, markdown]
         additional_dependencies: [pylint]
         args:
-          - --ignore=no_check*,
+          - --ignore=no_check*,__init__.py,python/python_made_easy
           - --max-line-length=79
           - --const-naming-style=any
           - --disable=E0401,W0104,R0903
@@ -203,13 +207,9 @@ repos:
     rev: v2.3.1
     hooks:
       - id: pylint
-        name: pylint
-        entry: pylint
-        language: python
-        types: [python]
         args:
           [
-            "--ignore=no_check*",
+            "--ignore=no_check*,__init__.py",
             "--max-line-length=79",
             "--const-naming-style=any",
             "--disable=E0401,W0104,R0903",
